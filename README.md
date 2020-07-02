@@ -19,7 +19,7 @@ pip install django
 A "Django project" can be composed of one or more "apps" that you deploy to a web host to create a full web application.
 To create a minimal Django app, then, it's necessary to first create the Django project to serve as the container for the app, then create the app itself.You can do this by running
 ```
-django-admin startproject web_project_name .
+django-admin startproject project_name .
 ```
 * ```startproject``` command assumes (by use of ```.``` at the end) that the current folder is your project folder.
 This then creates the project's Django command-line administrative utility ```manage.py``` and a sub-folder ```web_project_name``` that you chose.
