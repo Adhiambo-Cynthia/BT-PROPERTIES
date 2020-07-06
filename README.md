@@ -1,12 +1,20 @@
 # DJANGO CAD PROPERTIES PROJECT
-For complete beginners, I'm gonna help you with basic set up.
-### Setting up the django project
+### Technologies Used
+* Python 3.7
+* Bootstrap 4
+* Django 3.0.7
+* psycopg2 2.8.5
+* psycopg2-binary 2.8.5
+* Pillow 7.2.0
+* Postgresql
+
+### Project Setup
 1. On your file system, create a project folder for this named Real Estate_Django or any name of preference and open its command prompt.
 2. create a virtual environment named **env** with the command 
 ```
 python -m venv env
 ```
-Using a virtual environment avoids installing Django into a global Python environment and gives you exact control over the libraries used in an application.
+Using a virtual environment avoids installing Django into a global Python environment and gives you exact control over the libraries used in an application both in development and production mode.
 
 3. Depending on the code interpreter that you are using, select a python code interpreter that contains ```./env``` to it.
 If you are using VS Code you can find guidance on how to go about this at [VS Code Django Setup Documentation](https://code.visualstudio.com/docs/python/tutorial-django)
@@ -26,3 +34,15 @@ This then creates the project's Django command-line administrative utility ```ma
 * Then start Django's development server to make sure your virtual environment is set using the command ```python manage.py runserver``` . The server runs on the default port 8000. 
 
 :rocket: you are now set to go! :tada:
+
+### Installing the various packages
+* We'll also be using psycopg2 as our PostgreSQL database adapter.This will enable us to be able to write SQL statements directly on our apps. To install:
+```
+pip install psycopg2
+```
+```
+pip install psycopg2-binary
+```
+* After we make our models, we'll run ```python manage.py makemigrations``` to make migrations for the tables and apply them using ```python manage.py migrate``` which will create the tables inside our database.
+
+* For the image fields in the models, we'll need to ```pip install Pillow```
