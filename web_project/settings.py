@@ -71,7 +71,7 @@ DATABASES = {
         'NAME': 'btproperties',
         'USER': 'postgres',
         'HOST': 'localhost',
-        'PASSWORD': '123456'
+        'PASSWORD': 'cinadhis99'
     }
 }
 
