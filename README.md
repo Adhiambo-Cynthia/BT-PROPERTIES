@@ -1,4 +1,4 @@
-# DJANGO CAD PROPERTIES PROJECT
+# DJANGO BT PROPERTIES PROJECT
 ### Technologies Used
 * Python 3.7
 * Bootstrap 4
@@ -7,6 +7,21 @@
 * psycopg2-binary 2.8.5
 * Pillow 7.2.0
 * Postgresql
+
+### Design Specs
+* Mobile Friendly
+* Social media icons & contact info
+* Branded
+
+### Functionality Specs
+* Manage listings, realtors, contact inquiries and website users via admin
+* Role based users (staff and non-staff)
+* Display listings in app with pagination
+* Ability to set listings to unpublished
+* Search listings by keyword, city, state, bedrooms and price (Homepage & search page)
+* List realtors on about page with “seller of the month” (Control via admin)
+
+
 
 ### Project Setup
 1. On your file system, create a project folder for this named Real Estate_Django or any name of preference and open its command prompt.
@@ -46,3 +61,8 @@ pip install psycopg2-binary
 * After we make our models, we'll run ```python manage.py makemigrations``` to make migrations for the tables and apply them using ```python manage.py migrate``` which will create the tables inside our database.
 
 * For the image fields in the models, we'll need to ```pip install Pillow```
+
+### Customizing the admin app template stucture
+The default templates used by the Django admin are located under the ``` /django/contrib/admin/templates/``` directory of your Django installation inside your operating system's or virtual env Python environment ````virtual_env_directory/lib/python3.5/site-packages/django/contrib/admin/templates/```.
+
+All the Django admin templates inherit their behavior from the ````admin/base_site.html``` template, which itself inherits its behavior from the ```admin/base.html``` template.

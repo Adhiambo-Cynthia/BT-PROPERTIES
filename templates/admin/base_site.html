@@ -1,0 +1,19 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+{% block title %}BT Properties Admin{% endblock %}
+
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
+
+{% block branding %}
+<h1 id="head">
+    <img src="{% static 'img/logo.png' %}" alt="logo BT" class="brand_img" height="50" width="80">
+    BT Properties Admin
+</h1>
+{% endblock%}
+{% block footer %}
+<div id="footer">
+    <p>Copyright &copy; 2020, CYNTHIA ADHIAMBO</p>
+</div>
+{% endblock%}

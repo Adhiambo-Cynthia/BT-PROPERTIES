@@ -119,3 +119,7 @@ STATICFILES_DIRS = [
     
 ]
 STATIC_URL = '/static/'
+
+#Media Settings
+MEDIA_ROOT=os.path.join(BASE_DIR, 'media') #Absolute filesystem path to the directory that will hold user-uploaded files.
+MEDIA_URL='/media/'  #URL that handles the media served
