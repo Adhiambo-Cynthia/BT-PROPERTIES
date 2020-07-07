@@ -63,6 +63,6 @@ pip install psycopg2-binary
 * For the image fields in the models, we'll need to ```pip install Pillow```
 
 ### Customizing the admin app template stucture
-The default templates used by the Django admin are located under the ``` /django/contrib/admin/templates/``` directory of your Django installation inside your operating system's or virtual env Python environment ````virtual_env_directory/lib/python3.5/site-packages/django/contrib/admin/templates/```.
+The default templates used by the Django admin are located under the ``` /django/contrib/admin/templates/``` directory of your Django installation inside your operating system's or virtual env Python environment ```virtual_env_directory/lib/python3.5/site-packages/django/contrib/admin/templates/```.
 
-All the Django admin templates inherit their behavior from the ````admin/base_site.html``` template, which itself inherits its behavior from the ```admin/base.html``` template.
+All the Django admin templates inherit their behavior from the ```admin/base_site.html``` template, which itself inherits its behavior from the ```admin/base.html``` template.
