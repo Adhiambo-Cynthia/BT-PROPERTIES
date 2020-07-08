@@ -3,7 +3,7 @@ from datetime import datetime
 from realtors.models import Realtors
 
 class Listing(models.Model):
-    realtor=models.ForeignKey(
+    realtor =models.ForeignKey(
         Realtors,
         on_delete=models.DO_NOTHING,
     )
