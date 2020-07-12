@@ -66,3 +66,16 @@ pip install psycopg2-binary
 The default templates used by the Django admin are located under the ``` /django/contrib/admin/templates/``` directory of your Django installation inside your operating system's or virtual env Python environment ```virtual_env_directory/lib/python3.5/site-packages/django/contrib/admin/templates/```.
 
 All the Django admin templates inherit their behavior from the ```admin/base_site.html``` template, which itself inherits its behavior from the ```admin/base.html``` template.
+
+### Additional Structures
+1. In both forms for **'user registration'** and **'user login'**, we have utilized a CRSF Token
+ ```python
+ {% csfr_token %}
+ ```
+meant to prevent a CSFR attack.Cross-site request forgery (also known as CSRF) is a web security vulnerability that allows an attacker to induce users to perform actions that they do not intend to perform.For example, this might be to change the email address on their account or to change their password unintentionally.
+
+* The token basically ensures the requests made are:
+  * Unpredictable with high entropy, as for session tokens in general.
+  * Tied to the user's session.
+  * Strictly validated in every case before the relevant action is executed.
+
