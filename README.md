@@ -30,6 +30,7 @@
 python -m venv env
 ```
 Using a virtual environment avoids installing Django into a global Python environment and gives you exact control over the libraries used in an application both in development and production mode.
+You can activate your ```env``` by running ```env\Scripts\activate```
 
 3. Depending on the code interpreter that you are using, select a python code interpreter that contains ```./env``` to it.
 If you are using VS Code you can find guidance on how to go about this at [VS Code Django Setup Documentation](https://code.visualstudio.com/docs/python/tutorial-django)
