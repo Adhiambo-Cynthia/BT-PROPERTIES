@@ -1,4 +1,5 @@
 # DJANGO BT PROPERTIES PROJECT
+This project aims in helping real estate companies and their clients in showcasing, buying and managing properties online.You can create a user account and send inquiries to the various realtors concerning a property of interest and they'll be automatically notified via an email.
 ### Technologies Used
 * Python 3.7
 * Bootstrap 4
@@ -14,12 +15,24 @@
 * Branded
 
 ### Functionality Specs
-* Manage listings, realtors, contact inquiries and website users via admin
-* Role based users (staff and non-staff)
-* Display listings in app with pagination
-* Ability to set listings to unpublished
+#### App User
+* A display of realtors on about page with “seller of the month” 
+* A display of listings in app with pagination
 * Search listings by keyword, city, state, bedrooms and price (Homepage & search page)
-* List realtors on about page with “seller of the month” (Control via admin)
+*	Specific Listing page with images viewed through lightbox
+* Register and login for their user accounts
+* Listing page has a form to submit inquiry for that property listing
+* User can track their inquiries on their dashboard
+*	Form info should go to database and notify realtor(s) with an email
+*	Frontend register/login to track inquiries
+*	Both unregistered and registered users can submit form. If registered, can only submit one per listing
+
+#### Admin
+* Manage listings, realtors, contact inquiries and website users 
+* Role based users (staff and non-staff)
+* Ability to set listings to unpublished
+* Choose 'seller of the month'
+
 
 
 
