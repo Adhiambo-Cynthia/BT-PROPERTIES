@@ -129,6 +129,6 @@ MEDIA_URL='/media/'  #URL that handles the media served
 #messages
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
-    messages.ERROR: 'danger',
-    messages.SUCCESS: 'success',
+    messages.ERROR: 'danger',  #ou only need to provide tags for the levels you wish to override:
+   
 }
