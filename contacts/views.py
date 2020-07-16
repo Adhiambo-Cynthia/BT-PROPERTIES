@@ -41,11 +41,11 @@ def contact(request):
                 return redirect('/listings/'+ listing_id)
 
                 send_mail(
-                    'BT Properties Listing Inquiry'
+                    'BT Properties Listing Inquiry',
                     'There has been an inquiry for' + listing + '. Sign into the admin panel for more info',
                     'cinadhiambo22@gmail.com',
                     [realtor_email, 'nderituanne0@gmail.com'],
-                    fail_silently=False,
+                    fail_silently=False
                     )
     
 
