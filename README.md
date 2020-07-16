@@ -5,7 +5,7 @@ This project aims in helping real estate companies and their clients in showcasi
 * Bootstrap 4
 * Django 3.0.7
 * psycopg2 2.8.5
-* psycopg2-binary 2.8.5
+* psycopg2-binary 2.8.5z
 * Pillow 7.2.0
 * Postgresql
 
