@@ -37,16 +37,18 @@ def contact(request):
                 
                 contact=Contact(listing=listing, listing_id=listing_id,name=name, email=email, phone=phone, user_id=user_id, message=message)   
                 contact.save()
-                messages.success(request, 'Inquiry submitted, a realtor will get to you soon') 
-                return redirect('/listings/'+ listing_id)
 
                 send_mail(
                     'BT Properties Listing Inquiry',
                     'There has been an inquiry for' + listing + '. Sign into the admin panel for more info',
                     'cinadhiambo22@gmail.com',
-                    [realtor_email, 'nderituanne0@gmail.com'],
+                    ['nderituanne0@gmail.com'],
                     fail_silently=False
                     )
+                messages.success(request, 'Inquiry submitted, a realtor will get to you soon') 
+                return redirect('/listings/'+ listing_id)
+
+                
     
 
 
