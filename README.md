@@ -1,4 +1,4 @@
-# DJANGO BT PROPERTIES PROJECT
+# DJANGO BT PROPERTIES PROJECT :house:
 This project aims in helping real estate companies and their clients in showcasing, buying and managing properties online.You can create a user account and send inquiries to the various realtors concerning a property of interest and they'll be automatically notified via an email.
 ### Technologies Used
 * Python 3.7
@@ -32,6 +32,7 @@ This project aims in helping real estate companies and their clients in showcasi
 * Role based users (staff and non-staff)
 * Ability to set listings to unpublished
 * Choose 'seller of the month'
+![Gmail Message](/project_imgs/admin.JPG)
 
 
 
@@ -92,4 +93,31 @@ meant to prevent a CSFR attack.Cross-site request forgery (also known as CSRF) i
   * Unpredictable with high entropy, as for session tokens in general.
   * Tied to the user's session.
   * Strictly validated in every case before the relevant action is executed.
+2. #### Sending email notifications to realtors on Inquiry Submission
+in your ```views.py``` include the following code:
+```python
+from django.core.mail import send_mail
 
+send_mail(
+    'Subject here',
+    'Here is the message.',
+    'from@example.com',
+    ['to@example.com'],
+    fail_silently=False,
+)
+```
+and in your ```settings.py``` file of the project, include:
+```python
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='from@gmail.com'
+EMAIL_HOST_PASSWORD= 'your gmail password or app password if you have two step verification on'
+EMAIL_USE_TLS=True
+```
+Mail is sent using the SMTP host and port specified in the ```EMAIL_HOST``` and ```EMAIL_PORT``` settings. The ```EMAIL_HOST_USER``` and ```EMAIL_HOST_PASSWORD``` settings, if set, are used to authenticate the SMTP server, and the ```EMAIL_USE_TLS``` settings control whether a secure connection is used.
+The email will be sent as shown below.
+
+![Gmail Message](/project_imgs/email.JPG)
+
+You can find more on these settings in the [Django Emails](https://docs.djangoproject.com/en/3.0/topics/email/)
+And more on the different settings for Gmail at [Gmail SMTP Guide](https://www.saleshandy.com/smtp/gmail-smtp-settings/) especially if its a G-Suite Account or a restricted account.
