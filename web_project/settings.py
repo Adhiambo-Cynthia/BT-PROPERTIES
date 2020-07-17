@@ -136,12 +136,7 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',  #ou only need to provide tags for the levels you wish to override:
    
 }
-#email config
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_PORT=587
-EMAIL_HOST_USER='cinadhiambo22@gmail.com'
-EMAIL_HOST_PASSWORD= 'brhwrioujnhujwgp'
-EMAIL_USE_TLS=True
+
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
