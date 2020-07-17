@@ -12,9 +12,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ui72w51)wq5wle485gc*i=^lc1%sdp*-p225jkj(vpd#^!k7lx'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://btpropertiesapp.herokuapp.com/']
 
 
 # Application definition
