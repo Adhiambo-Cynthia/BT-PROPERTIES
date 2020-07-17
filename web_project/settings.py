@@ -39,6 +39,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -119,9 +120,11 @@ USE_TZ = True
 STATIC_ROOT=os.path.join(os.path.join(BASE_DIR, "static"),) #for bundling
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "web_project/static"), #the location of the static folder
+    #Extra lookup directories for collectstatic to find static files
     
 ]
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #Media Settings
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media') #Absolute filesystem path to the directory that will hold user-uploaded files.
@@ -140,4 +143,8 @@ EMAIL_HOST_USER='cinadhiambo22@gmail.com'
 EMAIL_HOST_PASSWORD= 'brhwrioujnhujwgp'
 EMAIL_USE_TLS=True
 
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+btproperties = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(btproperties)
 
