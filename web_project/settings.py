@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://btpropertiesapp.herokuapp.com/']
 
@@ -122,11 +122,11 @@ USE_TZ = True
 #Your project will probably also have static assets that aren’t tied to a particular app.
 #define a list of directories (STATICFILES_DIRS) in your settings file where Django will also look for static files
 STATIC_ROOT=os.path.join(os.path.join(BASE_DIR, "static"),) #for bundling
-STATICFILES_DIRS = [
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "web_project/static"), #the location of the static folder
     #Extra lookup directories for collectstatic to find static files
     
-]
+)
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
