@@ -76,8 +76,18 @@ DATABASES = {
         'USER': 'postgres',
         'HOST': 'localhost',
         'PASSWORD': 'cinadhis99'
+        'PORT': '5432'
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd2m88a9pmerp8o',
+#         'USER': 'syaqufmtvzmkwz',
+#         'HOST': 'ec2-107-20-15-85.compute-1.amazonaws.com',
+#         'PASSWORD': '0e5c00da6face2853116116cfa68e59f24404d8aa3ebe3c1152c8a6985e2e3ec'
+#     }
+# }
 
 
 # Password validation
@@ -136,7 +146,12 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',  #ou only need to provide tags for the levels you wish to override:
    
 }
-
+#email config
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=587
+EMAIL_HOST_USER='cinadhiambo22@gmail.com'
+EMAIL_HOST_PASSWORD= 'brhwrioujnhujwgp'
+EMAIL_USE_TLS=True
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
