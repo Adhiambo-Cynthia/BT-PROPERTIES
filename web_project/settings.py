@@ -9,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ui72w51)wq5wle485gc*i=^lc1%sdp*-p225jkj(vpd#^!k7lx'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -71,23 +71,17 @@ WSGI_APPLICATION = 'web_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'btproperties',
-        'USER': 'postgres',
-        'HOST': 'localhost',
-        'PASSWORD': 'cinadhis99',
-        'PORT': '5432'
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('DB_NAME', 'postgres'),
+        'USER': os.environ.get('DB_USER', 'postgres'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'password'),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
+        'TEST': {
+            'NAME': 'test_landville'
+        }
+    },
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd2m88a9pmerp8o',
-#         'USER': 'syaqufmtvzmkwz',
-#         'HOST': 'ec2-107-20-15-85.compute-1.amazonaws.com',
-#         'PASSWORD': '0e5c00da6face2853116116cfa68e59f24404d8aa3ebe3c1152c8a6985e2e3ec'
-#     }
-# }
 
 
 # Password validation
@@ -149,8 +143,8 @@ MESSAGE_TAGS = {
 #email config
 EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
-EMAIL_HOST_USER='cinadhiambo22@gmail.com'
-EMAIL_HOST_PASSWORD= 'brhwrioujnhujwgp'
+EMAIL_HOST_USER=os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD=os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS=True
 
 # Heroku: Update database configuration from $DATABASE_URL.
