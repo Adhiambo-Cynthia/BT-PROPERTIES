@@ -1,5 +1,10 @@
 
 import os
+from dotenv import load_dotenv
+from pathlib import Path
+env_path=Path('.env')
+print(env_path, 'This is the path************')
+load_dotenv(dotenv_path=env_path)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -12,9 +17,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://btpropertiesapp.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
